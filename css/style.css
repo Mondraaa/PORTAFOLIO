@@ -1,0 +1,803 @@
+
+/* ========================================
+   PORTAFOLIO PERSONAL
+   David Santiago Mondragón
+======================================== */
+
+/* Colores y configuración general */
+
+:root {
+    --fondo: #080d14;
+    --fondo-secundario: #101925;
+    --tarjeta: #131f2d;
+    --texto: #edf3fa;
+    --texto-secundario: #9baabd;
+    --azul: #65b7f5;
+    --borde: #263648;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN
+======================================== */
+
+header {
+    background: rgba(8, 13, 20, 0.96);
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav h2 {
+    margin-right: auto;
+    color: var(--texto);
+    font-size: 21px;
+    letter-spacing: -0.5px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--azul);
+}
+
+/* ========================================
+   CONTENIDO GENERAL
+======================================== */
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 85px 0;
+    scroll-margin-top: 75px;
+}
+
+section > h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    letter-spacing: -0.8px;
+}
+
+section > p {
+    color: var(--texto-secundario);
+    max-width: 800px;
+}
+
+/* ========================================
+   PORTADA PRINCIPAL
+======================================== */
+
+#inicio {
+    min-height: 570px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    position: relative;
+}
+
+/* Texto de presentación */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#inicio h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 750;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+#inicio h2 {
+    color: var(--azul);
+    font-size: clamp(19px, 2.5vw, 25px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    max-width: 560px;
+}
+
+/* Botones */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s;
+}
+
+.btn-principal {
+    background: var(--azul);
+    color: #07111d;
+}
+
+.btn-principal:hover {
+    background: #91cfff;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 1px solid var(--borde);
+    color: var(--texto);
+}
+
+.btn-secundario:hover {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+/* Fotografía personal */
+
+.hero-photo {
+    width: 100%;
+    max-width: 340px;
+    justify-self: center;
+    position: relative;
+}
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border-radius: 18px;
+    border: 1px solid var(--borde);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Detalle detrás de la fotografía */
+
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 28px;
+    left: 28px;
+    border: 2px solid var(--azul);
+    border-radius: 18px;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* ========================================
+   PROYECTOS
+======================================== */
+
+#proyectos {
+    border-top: 1px solid var(--borde);
+}
+
+#proyectos article {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 12px 30px;
+
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#proyectos article:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul);
+}
+
+#proyectos article img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #0b1420;
+    border-radius: 9px;
+    grid-row: span 2;
+}
+
+#proyectos article h3 {
+    font-size: 25px;
+    align-self: end;
+}
+
+#proyectos article p {
+    color: var(--texto-secundario);
+    align-self: start;
+}
+
+/* ========================================
+   SOBRE MÍ
+======================================== */
+
+#sobre-mi {
+    border-top: 1px solid var(--borde);
+}
+
+#sobre-mi p {
+    font-size: 16px;
+}
+
+/* ========================================
+   CONTACTO
+======================================== */
+
+#contacto {
+    border-top: 1px solid var(--borde);
+}
+
+/* ========================================
+   PIE DE PÁGINA
+======================================== */
+
+footer {
+    padding: 30px 25px;
+    border-top: 1px solid var(--borde);
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+/* ========================================
+   DISEÑO PARA CELULARES
+======================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    nav h2 {
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    #inicio {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    #inicio h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-photo {
+        max-width: 260px;
+    }
+
+    #proyectos article {
+        grid-template-columns: 1fr;
+    }
+
+    #proyectos article img {
+        grid-row: auto;
+        height: auto;
+        max-height: 250px;
+    }
+
+    #proyectos article h3 {
+        font-size: 22px;
+    }
+}
+
+/* AJUSTES DE LA PORTADA EN COMPUTADOR */
+
+@media (min-width: 769px) {
+
+    #inicio {
+        width: 100%;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+        gap: 60px;
+        padding-top: 110px;
+    }
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-photo {
+        width: 100%;
+        max-width: 340px;
+        justify-self: end;
+    }
+
+    .hero-photo img {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================
+   SECCIÓN SOBRE MÍ
+===================================== */
+
+.about-label {
+    color: var(--azul) !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 55px;
+    align-items: start;
+}
+
+.about-texto p {
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.about-texto strong {
+    color: var(--texto);
+}
+
+/* Información desplegable */
+
+.about-more {
+    margin-top: 25px;
+}
+
+.about-more summary {
+    color: var(--azul);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.about-more[open] summary {
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de información */
+
+.about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.about-card {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.about-card:hover {
+    border-color: var(--azul);
+    transform: translateY(-3px);
+}
+
+.about-card span {
+    display: block;
+    font-size: 10px;
+    color: var(--azul);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.about-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    font-size: 13px !important;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 900px) {
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Evitar que el menú tape las secciones */
+
+html {
+    scroll-padding-top: 110px;
+}
+
+section {
+    scroll-margin-top: 110px;
+}
+
+
+/* =====================================
+   HABILIDADES TÉCNICAS
+===================================== */
+
+#habilidades {
+    border-top: 1px solid var(--borde);
+}
+
+.skills-label {
+    color: var(--azul) !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.skills-intro {
+    color: var(--texto-secundario);
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul);
+}
+
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--texto);
+}
+
+.skill-card p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Etiquetas de tecnologías */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background: var(--fondo);
+    color: var(--azul);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* HERRAMIENTAS Y SOFTWARE */
+
+.herramientas {
+    margin-top: 65px;
+    padding-top: 40px;
+    border-top: 1px solid var(--borde);
+}
+
+.herramientas h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.herramientas > p {
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+}
+
+.herramientas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.herramienta-grupo {
+    background: var(--fondo-secundario);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.herramienta-grupo h4 {
+    color: var(--texto);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.herramienta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.herramienta-tags span {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    color: var(--azul);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .herramientas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================================
+   CONTACTO
+================================== */
+
+#contacto {
+    padding: 90px 0 110px;
+    border-top: 1px solid var(--borde);
+}
+
+.contacto-etiqueta {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--azul) !important;
+    margin-bottom: 10px;
+}
+
+#contacto > h2 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -3px;
+    margin-bottom: 55px;
+}
+
+.contacto-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 75px;
+    align-items: start;
+}
+
+/* Información de contacto */
+
+.contacto-intro {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 21px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.contacto-dato a {
+    overflow-wrap: anywhere;
+}
+
+.contacto-dato a:hover {
+    color: var(--azul);
+}
+
+.contacto-icono {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border: 1px solid var(--borde);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--azul);
+}
+
+/* Formulario */
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.contacto-formulario label {
+    color: var(--azul);
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--borde);
+    background: var(--fondo-secundario);
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.contacto-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    border-color: var(--azul);
+}
+
+.contacto-formulario button {
+    background: var(--azul);
+    border: 1px solid var(--azul);
+    color: #07111d;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto-formulario button:hover {
+    background: #91cfff;
+}
+
+#contacto .contacto-nota {
+    font-size: 12px;
+    color: var(--texto-secundario);
+    margin-top: 5px;
+}
+
+/* Celulares */
+
+@media (max-width: 768px) {
+
+    .contacto-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #contacto {
+        padding: 65px 0;
+    }
+
+    #contacto > h2 {
+        margin-bottom: 35px;
+        letter-spacing: -1px;
+    }
+}

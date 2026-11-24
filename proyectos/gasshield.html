@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GasShield 5LP | David Santiago Mondragón</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gasshield.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav>
+            <h2>Mi Portafolio</h2>
+            <a href="../index.html#inicio">Inicio</a>
+            <a href="../index.html#proyectos">Proyectos</a>
+            <a href="../index.html#sobre-mi">Sobre mí</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="pagina-proyecto">
+
+        <!-- PRESENTACIÓN -->
+        <section class="proyecto-hero">
+
+            <a href="../index.html#proyectos" class="volver">
+                ← Volver a proyectos
+            </a>
+
+            <p class="etiqueta">PROYECTO ACADÉMICO · 2026</p>
+
+            <h1>GasShield 5LP</h1>
+
+            <h2>
+                Sistema electrónico de monitoreo de gases
+                basado en PSoC 5LP
+            </h2>
+
+            <p>
+                Proyecto de ingeniería electrónica desarrollado
+                en la Universidad Surcolombiana, enfocado en
+                el diseño de una tarjeta de expansión para
+                adquirir y procesar señales de sensores de gas.
+            </p>
+
+            <div class="tecnologias">
+                <span>PSoC 5LP</span>
+                <span>MQ-7</span>
+                <span>ADC</span>
+                <span>EasyEDA</span>
+                <span>PCB</span>
+                <span>Firmware</span>
+
+
+        <!-- PROBLEMÁTICA -->
+        <section id="problema">
+
+            <p class="etiqueta">01 · CONTEXTO</p>
+            <h2>Problemática identificada</h2>
+
+            <p>
+                En el Laboratorio de Aguas de la Universidad
+                Surcolombiana se realizan procesos de
+                calcinación de biomasa mediante hornos
+                que pueden generar gases peligrosos,
+                como el monóxido de carbono.
+            </p>
+
+            <p>
+                La ausencia de instrumentos de monitoreo
+                ambiental motivó el planteamiento de
+                una solución electrónica capaz de adquirir
+                señales de sensores de gas y proporcionar
+                información sobre su comportamiento.
+            </p>
+
+<!-- RESULTADOS DESTACADOS -->
+<div class="resumen-resultados">
+
+    <div class="resultado-card">
+        <span class="resultado-numero">+90 %</span>
+        <h3>Respuesta del sensor</h3>
+        <p>
+            Incremento de la señal ante humo
+            durante las pruebas del prototipo.
+        </p>
+    </div>
+
+    <div class="resultado-card">
+        <span class="resultado-numero">0 errores</span>
+        <h3>Verificación de PCB</h3>
+        <p>
+            Diseño 2.1 verificado mediante
+            controles ERC y DRC.
+        </p>
+    </div>
+
+    <div class="resultado-card">
+        <span class="resultado-numero">US$15,65</span>
+        <h3>Costo de fabricación</h3>
+        <p>
+            Cotización de cinco PCB, dos
+            ensambladas con componentes SMD.
+            No incluye THT ni envío.
+        </p>
+    </div>
+
+</div>
+
+<p class="resumen-aclaracion">
+    El prototipo fue probado físicamente.
+    Las versiones industriales 2.0 y 2.1
+    fueron diseñadas y cotizadas, pero no fabricadas.
+</p>
+
+            </div>
+
+            <figure>
+                <img
+                    src="../imagenes/gasshield/pcb-final.jpg"
+                    alt="Diseño final de la PCB GasShield 5LP"
+                >
+                <figcaption>
+                    Diseño de la PCB GasShield 5LP.
+                </figcaption>
+            </figure>
+
+        </section>
+
+
+
+
+        </section>
+
+        <!-- DISEÑO ELECTRÓNICO -->
+        <section id="diseno">
+
+            <p class="etiqueta">02 · DESARROLLO</p>
+            <h2>Diseño electrónico</h2>
+
+            <p>
+                El sistema utiliza la PSoC 5LP como unidad
+                central de adquisición y procesamiento.
+                La tarjeta de expansión integra los
+                sensores y los circuitos necesarios para
+                su alimentación y acondicionamiento
+                de señal.
+            </p>
+
+            <div class="galeria">
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/esquematico.jpg"
+                        alt="Esquemático electrónico"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Esquemático del sistema.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/pcb-pistas.jpg"
+                        alt="Trazado de pistas de la PCB"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Diseño y enrutamiento de pistas.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- PARTICIPACIÓN PERSONAL -->
+        <section id="contribuciones">
+
+            <p class="etiqueta">03 · MI PARTICIPACIÓN</p>
+            <h2>Mis contribuciones</h2>
+
+            <div class="contribuciones-grid">
+
+                <article class="contribucion">
+
+                    <h3>Programación</h3>
+
+                    <p>
+                        Desarrollé funciones del firmware
+                        de la PSoC 5LP para la lectura
+                        de sensores mediante ADC,
+                        el control del ciclo de calentamiento
+                        del MQ-7 y la transmisión de datos
+                        al computador mediante
+                        comunicación serial.
+                    </p>
+
+                </article>
+
+                <article class="contribucion">
+
+                    <h3>Pruebas y validación</h3>
+
+                    <p>
+                        Participé en las mediciones
+                        eléctricas y pruebas funcionales
+                        realizadas durante el montaje
+                        en protoboard y posteriormente
+                        sobre la PCB del prototipo.
+                    </p>
+
+                </article>
+
+                <article class="contribucion">
+
+                    <h3>Diseño de PCB</h3>
+
+                    <p>
+                        Colaboré en la elaboración
+                        del esquemático electrónico
+                        y en el trazado de pistas
+                        de la placa de circuito impreso.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PROTOTIPO Y MEDICIONES -->
+        <section id="pruebas">
+
+            <p class="etiqueta">04 · VALIDACIÓN</p>
+            <h2>Pruebas experimentales</h2>
+
+            <p>
+                Se realizaron pruebas de funcionamiento
+                para verificar las condiciones eléctricas
+                del circuito y la respuesta del sensor
+                ante diferentes estímulos.
+            </p>
+
+            <div class="galeria">
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/prototipo.jpg"
+                        alt="Prototipo electrónico"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Desarrollo del prototipo físico.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/pruebas.jpg"
+                        alt="Pruebas del circuito"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Verificación experimental del sistema.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <h3>Resultados medidos en el prototipo</h3>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-resultados">
+
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Corriente en fase alta</td>
+                            <td>140,2 mA</td>
+                        </tr>
+                        <tr>
+                            <td>Corriente en fase baja</td>
+                            <td>47,5 mA</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje en fase alta</td>
+                            <td>4,59 V</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje en fase baja</td>
+                            <td>1,39 V</td>
+                        </tr>
+                        <tr>
+                            <td>Variación de señal ante humo</td>
+                            <td>+90 %</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+        <!-- RESULTADOS DE LA PSOC -->
+        <section id="resultados">
+
+            <p class="etiqueta">05 · ADQUISICIÓN DE DATOS</p>
+            <h2>Resultados de la PSoC 5LP</h2>
+
+            <p>
+                La programación permitió adquirir
+                las señales analógicas de los sensores
+                mediante ADC y transmitir los valores
+                al computador por comunicación serial.
+            </p>
+
+            <h3>Clasificación visual programada</h3>
+
+            <div class="niveles">
+
+                <div class="nivel verde">
+                    <strong>Verde</strong>
+                    <span>Menos de 30 ppm</span>
+                </div>
+
+                <div class="nivel amarillo">
+                    <strong>Amarillo</strong>
+                    <span>30 a 80 ppm</span>
+                </div>
+
+                <div class="nivel rojo">
+                    <strong>Rojo</strong>
+                    <span>Más de 80 ppm</span>
+                </div>
+
+            </div>
+
+            <p class="nota">
+                Los valores en ppm corresponden a estimaciones
+                del firmware sin calibración certificada.
+                Los rangos representan los niveles de
+                señalización del prototipo, no límites
+                de seguridad validados.
+            </p>
+
+            <div class="galeria">
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/resultado-rojo-80ppm.jpg"
+                        alt="Registro serial cercano a 31 ppm"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Lecturas cercanas a 31 ppm:
+                        rango amarillo según los umbrales
+                        establecidos.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../imagenes/gasshield/resultado-verde-30ppm.jpg"
+                        alt="Registro serial superior a 80 ppm"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Lecturas superiores a 80 ppm:
+                        rango rojo del sistema.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+<!-- EVOLUCIÓN DEL PROYECTO -->
+<section id="evolucion">
+
+    <p class="etiqueta">06 · EVOLUCIÓN</p>
+    <h2>Del prototipo al diseño industrial</h2>
+
+    <p>
+        El desarrollo de GasShield 5LP comprendió
+        diferentes etapas, desde la construcción
+        de un prototipo funcional hasta el diseño
+        de una PCB optimizada para fabricación.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <span class="timeline-step">01</span>
+
+            <div class="timeline-content">
+                <h3>Prototipo inicial</h3>
+                <p>
+                    Implementación del circuito,
+                    programación de la PSoC 5LP
+                    y adquisición de señales
+                    provenientes del sensor MQ-7.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span class="timeline-step">02</span>
+
+            <div class="timeline-content">
+                <h3>Validación experimental</h3>
+                <p>
+                    Mediciones y pruebas funcionales
+                    sobre el prototipo para comprobar
+                    su respuesta y detectar aspectos
+                    susceptibles de mejora.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span class="timeline-step">03</span>
+
+            <div class="timeline-content">
+                <h3>Diseño industrial 2.0</h3>
+                <p>
+                    Rediseño del sistema electrónico
+                    y de la PCB, incorporando mejoras
+                    de integración y preparación
+                    para fabricación industrial.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span class="timeline-step">04</span>
+
+            <div class="timeline-content">
+                <h3>Optimización 2.1</h3>
+                <p>
+                    Reducción de costos mediante
+                    selección de componentes y
+                    ajustes del diseño. La versión
+                    fue verificada y cotizada,
+                    pero no fabricada.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+        <!-- FABRICACIÓN INDUSTRIAL -->
+        <section id="fabricacion">
+
+            <p class="etiqueta">07 · OPTIMIZACIÓN</p>
+            <h2>Diseño para fabricación</h2>
+
+            <p>
+                Después de las pruebas del prototipo,
+                el equipo desarrolló dos versiones
+                de PCB orientadas a fabricación industrial.
+                Se verificaron el esquemático, el trazado
+                y los archivos de fabricación.
+            </p>
+
+            <div class="costos">
+
+                <article class="costo">
+                    <h3>Versión 2.0</h3>
+                    <strong>USD 29,98</strong>
+                    <p>Cotización sin cupón.</p>
+                </article>
+
+                <article class="costo">
+                    <h3>Versión 2.1</h3>
+                    <strong>USD 15,65</strong>
+                    <p>Versión optimizada sin cupón.</p>
+                </article>
+
+            </div>
+
+            <p class="nota">
+                Cotizaciones de JLCPCB para cinco PCB,
+                dos de ellas ensambladas con componentes
+                SMD. No incluyen componentes THT ni envío.
+            </p>
+
+        </section>
+
+        <!-- CONCLUSIONES -->
+        <section id="conclusiones">
+
+          
+<!-- CONCLUSIONES Y APRENDIZAJES -->
+<section id="conclusiones">
+
+    <p class="etiqueta">08 · APRENDIZAJES</p>
+
+    <h2>Conclusiones y aprendizajes</h2>
+
+    <h3>Resultados del proyecto</h3>
+
+    <p>
+        El desarrollo de GasShield 5LP permitió
+        integrar conocimientos de electrónica,
+        programación de microcontroladores e
+        instrumentación en una solución orientada
+        al monitoreo de gases.
+    </p>
+
+    <p>
+        Las pruebas experimentales permitieron
+        comprobar el funcionamiento del prototipo,
+        incluyendo la adquisición de señales,
+        el control del calefactor del sensor MQ-7,
+        la transmisión serial de datos y la
+        respuesta del sistema ante estímulos
+        de prueba.
+    </p>
+
+    <p>
+        A partir de los resultados obtenidos,
+        se identificaron oportunidades de mejora
+        que orientaron el rediseño electrónico
+        y el desarrollo de versiones preparadas
+        para fabricación industrial.
+    </p>
+
+    <h3>Aprendizajes personales</h3>
+
+    <p>
+        Mi participación en este proyecto me
+        permitió fortalecer mis habilidades
+        en programación de microcontroladores,
+        configuración de convertidores ADC,
+        comunicación serial y control de
+        sistemas electrónicos.
+    </p>
+
+    <p>
+        Asimismo, adquirí mayor experiencia
+        en la elaboración de esquemáticos,
+        el trazado de pistas de PCB y la
+        realización de pruebas experimentales
+        para verificar el funcionamiento
+        de circuitos electrónicos.
+    </p>
+
+    <p>
+        Uno de los aprendizajes más importantes
+        fue comprender la relevancia de las
+        mediciones reales durante el desarrollo
+        de un prototipo, ya que permiten
+        identificar diferencias entre el
+        comportamiento esperado y los
+        resultados obtenidos.
+    </p>
+
+    <h3>Proyección del proyecto</h3>
+
+    <p>
+        Aunque el proyecto académico concluyó,
+        las versiones industriales diseñadas
+        ofrecen una base para desarrollos
+        posteriores, como la ampliación del
+        firmware, la calibración de sensores
+        y la validación en condiciones reales
+        de operación.
+    </p>
+
+    <p class="nota">
+        El prototipo inicial fue validado
+        mediante pruebas de banco.
+
+        Las versiones industriales 2.0 y 2.1
+        quedaron diseñadas, verificadas
+        digitalmente y cotizadas, pero no
+        fueron fabricadas.
+
+        La calibración para obtener valores
+        confiables en ppm y las pruebas
+        durante una calcinación real
+        permanecieron pendientes.
+    </p>
+
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>GasShield 5LP · Proyecto académico · 2026</p>
+    </footer>
+
+</body>
+</html>
